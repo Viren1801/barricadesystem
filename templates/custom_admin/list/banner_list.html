@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{%load static%}
+{% load auth_extras %}
+
+
+{% block links %}
+
+{% endblock %}
+
+{%block titlebar%}
+  <title>Banner</title>
+{%endblock%}
+
+{% block page-head %}
+   Banner Page
+{% endblock %}
+
+{% block breadcrumb %}
+   Banner page
+{% endblock %}
+
+
+
+
+
+
+
+{% block wrapper%}
+
+
+<section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+
+            <div class="card-header">
+
+                <div class="col-12">
+                       <a href="{% url 'add_banner'%}" class=" btn btn-primary float-right">
+                       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                       <span><strong>Add +</strong></span>
+                       </a>
+                </div>
+                <h3 class="card-title">Banner table</h3>
+
+            </div>
+
+            <!-- /.card-header -->
+            <div class="card-body ">
+              <table class="datatable table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>id</th>
+                  <th>banner name</th>
+                  <th>image</th>
+                  <th>created_by</th>
+                  <th>created_date</th>
+                  <th>modified_by</th>
+                  <th>status</th>
+                  <th>Action</th>
+                </tr>
+
+
+                </thead>
+                <tbody>
+
+
+
+                </tbody>
+              </table>
+
+
+
+
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+      </div>
+  </div>
+</section>
+
+
+{% endblock%}
+
+
+
+
+
+
+<script src="{% static 'plugins/datatables/jquery.dataTables.js' %}"></script>
+<script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/r-2.2.5/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/r-2.2.5/datatables.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
